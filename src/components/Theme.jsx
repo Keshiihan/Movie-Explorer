@@ -11,7 +11,7 @@ const Theme = createTheme({
     },
     Text: {
       main: '#ffffff',  
-    },
+    }, 
     Favorite: {
       main: '#ff0000',  
     },

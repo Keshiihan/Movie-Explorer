@@ -25,17 +25,35 @@ const SearchInput = ({ onSearch }) => {
   };
 
   return (
-    <form onSubmit={handleSearch}>
+    <form onSubmit={handleSearch} className="w-full flex justify-center">
       <input
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        className="w-full h-11 rounded-[8rem] bg-white text-black/50 px-4 outline-none"
+        className="
+          w-full
+          max-w-lg
+          h-11
+          rounded-full
+          bg-white
+          text-black/70
+          px-4
+          outline-none
+          shadow-md
+          transition-all
+          duration-200
+          focus:ring-2
+          focus:ring-primary
+          text-base
+          sm:text-base
+          md:text-lg
+          lg:text-xl
+          placeholder:text-gray-400
+        "
         placeholder="Search for movies..."
+        style={{ minWidth: 0 }}
       />
     </form>
-
-    
   );
 };
 

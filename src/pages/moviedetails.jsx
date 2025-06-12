@@ -210,21 +210,34 @@ const MovieDetails = () => {
           </Box>
 
           {/* Trailer */}
-          {trailer && (
-            <Button
-              variant="contained"
-              href={trailer}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4"
-              style={{
-                backgroundColor: theme.palette.primary.main,
-                color: theme.palette.text.main,
-              }}
-            >
-              Watch Trailer
-            </Button>
-          )}
+{trailer && (
+  <Button
+    variant="contained"
+    href={trailer}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="mt-4"
+    sx={{
+      background: "rgba(169, 137, 234, 0.25)", // semi-transparent glass color
+      color: "#ffffff",
+      backdropFilter: "blur(8px)",
+      boxShadow: "0 4px 32px 0 rgba(31,93,226,0.15)",
+      border: "1px solid rgba(255,255,255,0.18)",
+      fontWeight: "bold",
+      px: 4,
+      py: 1.5,
+      borderRadius: 3,
+      transition: "background 0.3s, transform 0.2s",
+      "&:hover": {
+        background: "rgba(31,93,226,0.35)",
+        transform: "scale(1.05)",
+        boxShadow: "0 8px 40px 0 rgba(31,93,226,0.25)",
+      },
+    }}
+  >
+    Watch Trailer
+  </Button>
+)}
         </Grid>
       </Grid>
 
